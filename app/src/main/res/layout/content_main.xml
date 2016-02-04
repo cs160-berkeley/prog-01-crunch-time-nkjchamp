@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_main"
+        tools:context="com.example.neil.crunchtime.MainActivity">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editMinsLogged"
+            android:layout_below="@+id/excercises"
+            android:layout_alignEnd="@+id/excercises"
+            android:layout_toEndOf="@+id/viewCalsBurned"
+            android:hint="0"
+            android:maxLength="7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Minutes"
+            android:id="@+id/minsLogged"
+            android:layout_alignTop="@+id/textView"
+            android:layout_toEndOf="@+id/numOf" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Number of Calories Burned:"
+            android:id="@+id/calsBurned"
+            android:layout_below="@+id/editMinsLogged"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/viewCalsBurned"
+            android:text="Calories"
+            android:textColor="#000000"
+            android:layout_below="@+id/calsBurned"
+            android:layout_centerHorizontal="true" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/excercises"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="44dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Number Of "
+            android:id="@+id/numOf"
+            android:layout_alignBottom="@+id/editMinsLogged"
+            android:layout_alignStart="@+id/excercises" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=":"
+            android:id="@+id/textView"
+            android:layout_alignBottom="@+id/editMinsLogged"
+            android:layout_toEndOf="@+id/minsLogged" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="What if you did other exercises?"
+            android:id="@+id/otherExercises"
+            android:layout_marginTop="62dp"
+            android:layout_below="@+id/viewCalsBurned"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Leg-Lift"
+            android:id="@+id/e1"
+            android:layout_marginTop="28dp"
+            android:layout_below="@+id/otherExercises"
+            android:layout_alignStart="@+id/calsBurned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Jogging"
+            android:id="@+id/e2"
+            android:layout_below="@+id/e1"
+            android:layout_alignEnd="@+id/e4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Jumping Jacks"
+            android:id="@+id/e3"
+            android:layout_below="@+id/e2"
+            android:layout_alignEnd="@+id/e1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c1"
+            android:layout_alignTop="@+id/e1"
+            android:layout_toEndOf="@+id/viewCalsBurned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c2"
+            android:layout_alignTop="@+id/e2"
+            android:layout_toEndOf="@+id/viewCalsBurned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c3"
+            android:layout_alignTop="@+id/e3"
+            android:layout_toEndOf="@+id/viewCalsBurned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Minutes"
+            android:id="@+id/m1"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_toEndOf="@+id/textView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView3"
+            android:layout_alignTop="@+id/c1"
+            android:layout_toEndOf="@+id/c1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView2"
+            android:layout_alignTop="@+id/c2"
+            android:layout_toEndOf="@+id/c2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Minutes"
+            android:id="@+id/m2"
+            android:layout_above="@+id/e3"
+            android:layout_toEndOf="@+id/textView2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView4"
+            android:layout_alignTop="@+id/c3"
+            android:layout_toEndOf="@+id/c3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Minutes"
+            android:id="@+id/m3"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView5"
+            android:layout_below="@+id/e3"
+            android:layout_alignStart="@+id/e3"
+            android:layout_marginTop="28dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c4"
+            android:layout_alignTop="@+id/e4"
+            android:layout_alignStart="@+id/c3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Minutes"
+            android:id="@+id/m4"
+            android:layout_alignBaseline="@+id/c4"
+            android:layout_alignBottom="@+id/c4"
+            android:layout_alignStart="@+id/m3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Plank"
+            android:id="@+id/e4"
+            android:layout_below="@+id/e3"
+            android:layout_alignEnd="@+id/e3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Pull Ups"
+            android:id="@+id/e5"
+            android:layout_below="@+id/e4"
+            android:layout_alignEnd="@+id/e4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c5"
+            android:layout_alignTop="@+id/e5"
+            android:layout_alignStart="@+id/c4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Reps"
+            android:id="@+id/m5"
+            android:layout_alignTop="@+id/c5"
+            android:layout_toEndOf="@+id/textView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Push Ups"
+            android:id="@+id/e6"
+            android:layout_below="@+id/e5"
+            android:layout_alignEnd="@+id/e5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c6"
+            android:layout_alignTop="@+id/e6"
+            android:layout_toStartOf="@+id/textView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Reps"
+            android:id="@+id/m6"
+            android:layout_alignTop="@+id/c6"
+            android:layout_toEndOf="@+id/textView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Sit Ups"
+            android:id="@+id/e7"
+            android:layout_below="@+id/e6"
+            android:layout_alignEnd="@+id/e3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c7"
+            android:layout_alignTop="@+id/e7"
+            android:layout_alignStart="@+id/c6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Reps"
+            android:id="@+id/m7"
+            android:layout_below="@+id/m6"
+            android:layout_alignStart="@+id/m6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Squats"
+            android:id="@+id/e8"
+            android:layout_below="@+id/e7"
+            android:layout_alignEnd="@+id/e3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c8"
+            android:layout_alignTop="@+id/e8"
+            android:layout_toEndOf="@+id/viewCalsBurned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Reps"
+            android:id="@+id/m8"
+            android:layout_alignTop="@+id/textView6"
+            android:layout_toEndOf="@+id/textView6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Stair-Climbing"
+            android:id="@+id/e9"
+            android:layout_below="@+id/e8"
+            android:layout_alignEnd="@+id/e3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c9"
+            android:layout_below="@+id/c8"
+            android:layout_toEndOf="@+id/viewCalsBurned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Minutes"
+            android:id="@+id/m9"
+            android:layout_below="@+id/m8"
+            android:layout_toEndOf="@+id/textView6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Swimming"
+            android:id="@+id/e10"
+            android:layout_below="@+id/e9"
+            android:layout_alignEnd="@+id/e3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c10"
+            android:layout_below="@+id/c9"
+            android:layout_toEndOf="@+id/viewCalsBurned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Minutes"
+            android:id="@+id/m10"
+            android:layout_below="@+id/m9"
+            android:layout_toEndOf="@+id/textView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Walking"
+            android:id="@+id/e11"
+            android:layout_below="@+id/e10"
+            android:layout_alignEnd="@+id/e3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/c11"
+            android:layout_below="@+id/c10"
+            android:layout_toEndOf="@+id/viewCalsBurned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Minutes"
+            android:id="@+id/m11"
+            android:layout_below="@+id/m10"
+            android:layout_toEndOf="@+id/textView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView6"
+            android:layout_alignTop="@+id/c8"
+            android:layout_toEndOf="@+id/c8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView7"
+            android:layout_below="@+id/c8"
+            android:layout_toEndOf="@+id/c9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView8"
+            android:layout_below="@+id/c8"
+            android:layout_toEndOf="@+id/c9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView9"
+            android:layout_below="@+id/m9"
+            android:layout_alignStart="@+id/textView7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView10"
+            android:layout_below="@+id/c10"
+            android:layout_toEndOf="@+id/c11" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView11"
+            android:layout_below="@+id/c4"
+            android:layout_toEndOf="@+id/c5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView12"
+            android:layout_below="@+id/c5"
+            android:layout_toEndOf="@+id/c6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text=" "
+            android:id="@+id/textView13"
+            android:layout_below="@+id/c3"
+            android:layout_toEndOf="@+id/c3" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewCalsBurnedEdit"
+            android:layout_below="@+id/viewCalsBurned"
+            android:layout_alignEnd="@+id/c1"
+            android:hint="Calories" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
