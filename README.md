@@ -1,6 +1,6 @@
 # PROG 01: Crunch Time
 
-CrunchTime is an app that allows users to enter the number of minutes/reps of an activity performed and receive the number of calories they burned while doing that activity.
+CrunchTime is an app that allows users to enter the number of minutes/reps of an activity performed and receive the number of calories they burned while doing that activity. (Executable can be found in the app directory).
 
 ## Authors
 
