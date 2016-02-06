@@ -1,18 +1,21 @@
 # PROG 01: Crunch Time
 
-Briefly describe your app here.
+CrunchTime is an app that allows users to enter the number of minutes/reps of an activity performed and receive the number of calories they burned while doing that activity.
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Neil Jagtiani ([njagtiani@berkeley.edu](mailto:your_email@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See CrunchTime (https://vimeo.com/neiljag/cs160prog01) (password: crunctime)
 
 ## Screenshots
 
-<img src="screenshots/main.png" height="400" alt="Screenshot"/>
+<img src="screenshots/CrunchTime_Launch.png" height="400" alt="Screenshot1"/>
+<img src="screenshots/CrunchTime_Spinner.png" height="400" alt="Screenshot2"/>
+<img src="screenshots/CrunchTime_42Jogging.png" height="400" alt="Screenshot3"/>
+<img src="screenshots/CrunchTime_42Jogging_Landscape.png" width="400" alt="Screenshot4"/>
 
 ## Acknowledgments
 
