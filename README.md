@@ -19,7 +19,6 @@ See CrunchTime (https://vimeo.com/neiljag/cs160prog01) (password: crunchtime)
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Any other support
-
-*Feel free to enhance your README. For Markdown syntax, see [the GitHub Guides](https://guides.github.com/features/mastering-markdown/). Remove this line in your submission.*
+* Android Tutorials
+* http://codehandbook.org/a-simple-android-application-for-adding-two-numbers/
+* http://www.tutorialspoint.com/android/android_spinner_control.htm
