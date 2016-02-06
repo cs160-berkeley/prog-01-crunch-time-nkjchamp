@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     EditText minsLogged;
     TextView calsBurned;
-    EditText calsBurnedEdit;
-//    Button btnSubmit;
     Spinner exerciseOptions;
     TextView minsOrReps;
     TextView exercise0, conversion0, measure0;
@@ -82,8 +80,6 @@ public class MainActivity extends AppCompatActivity {
 
         minsLogged = (EditText)findViewById(R.id.editMinsLogged);
         calsBurned = (TextView)findViewById(R.id.viewCalsBurned);
-//        calsBurnedEdit = (EditText)findViewById(R.id.viewCalsBurnedEdit);
-//        btnSubmit = (Button)findViewById(R.id.submit);
         minsOrReps = (TextView)findViewById(R.id.minsLogged);
 
         exerciseOptions = (Spinner) findViewById(R.id.excercises);
@@ -169,20 +165,11 @@ public class MainActivity extends AppCompatActivity {
                 calsBurned.setText(Integer.toString((int) Math.round(calories)));
                 calsBurned.setTextColor(Color.BLACK);
 
-//                calsBurnedEdit.setText(Integer.toString((int) Math.round(calories)));
-
                 ArrayList<ExerciseInfo> otherExercises = new ArrayList<ExerciseInfo>();
 
                 for (ExerciseInfo e : exercise_hash.values()) {
                     if (! e.exercise_name.equals(selected_exercise)) {
                         otherExercises.add(e);
-//                        exercise1.setText(e.exercise_name);
-//                        conversion1.setText(Double.toString((double) Math.round(calories / e.calories_per)));
-//                        if(e.mins_or_reps) {
-//                            measure1.setText("Minutes");
-//                        } else {
-//                            measure1.setText("Reps");
-//                        }
                     }
                 }
 
@@ -274,8 +261,6 @@ public class MainActivity extends AppCompatActivity {
                     measure10.setText("Reps");
                 }
 
-
-
             }
 
             public void afterTextChanged(Editable editable) {
@@ -283,177 +268,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
-
-//        calsBurnedEdit.addTextChangedListener(new TextWatcher() {
-//
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//                String selected_exercise = exerciseOptions.getSelectedItem().toString();
-//                Log.i("mins Logged:", minsLogged.getText().toString());
-//                System.out.println(minsLogged.getText().toString());
-//                calories = 0;
-//                mins = 0;
-//                if (calsBurnedEdit.getText().length() == 0) {
-//                    Log.i("", "Got to ZERO");
-//                    calories = 0;
-//                    mins = 0;
-//                } else {
-//                    calories = Double.parseDouble(calsBurnedEdit.getText().toString());
-//
-//                    if (exercise_hash.get(selected_exercise).mins_or_reps) {
-//                        minsOrReps.setText("Minutes");
-//                    } else {
-//                        minsOrReps.setText("Reps");
-//                    }
-//                    mins = calories / exercise_hash.get(selected_exercise).calories_per;
-//                }
-//
-//                minsLogged.setText(Double.toString((double) Math.round(mins)));
-//
-//                ArrayList<ExerciseInfo> otherExercises = new ArrayList<ExerciseInfo>();
-//
-//                for (ExerciseInfo e : exercise_hash.values()) {
-//                    if (! e.exercise_name.equals(selected_exercise)) {
-//                        otherExercises.add(e);
-//                    }
-//                }
-//
-//                exercise0.setText(otherExercises.get(0).exercise_name);
-//                conversion0.setText(Double.toString((double) Math.round(calories / otherExercises.get(0).calories_per)));
-//                if(otherExercises.get(0).mins_or_reps) {
-//                    measure0.setText("Minutes");
-//                } else {
-//                    measure0.setText("Reps");
-//                }
-//
-//                exercise1.setText(otherExercises.get(1).exercise_name);
-//                conversion1.setText(Double.toString((double) Math.round(calories / otherExercises.get(1).calories_per)));
-//                if(otherExercises.get(1).mins_or_reps) {
-//                    measure1.setText("Minutes");
-//                } else {
-//                    measure1.setText("Reps");
-//                }
-//
-//                exercise2.setText(otherExercises.get(2).exercise_name);
-//                conversion2.setText(Double.toString((double) Math.round(calories / otherExercises.get(2).calories_per)));
-//                if(otherExercises.get(2).mins_or_reps) {
-//                    measure2.setText("Minutes");
-//                } else {
-//                    measure2.setText("Reps");
-//                }
-//
-//                exercise3.setText(otherExercises.get(3).exercise_name);
-//                conversion3.setText(Double.toString((double) Math.round(calories / otherExercises.get(3).calories_per)));
-//                if(otherExercises.get(3).mins_or_reps) {
-//                    measure3.setText("Minutes");
-//                } else {
-//                    measure3.setText("Reps");
-//                }
-//
-//                exercise4.setText(otherExercises.get(4).exercise_name);
-//                conversion4.setText(Double.toString((double) Math.round(calories / otherExercises.get(4).calories_per)));
-//                if(otherExercises.get(4).mins_or_reps) {
-//                    measure4.setText("Minutes");
-//                } else {
-//                    measure4.setText("Reps");
-//                }
-//
-//                exercise5.setText(otherExercises.get(5).exercise_name);
-//                conversion5.setText(Double.toString((double) Math.round(calories / otherExercises.get(5).calories_per)));
-//                if(otherExercises.get(5).mins_or_reps) {
-//                    measure5.setText("Minutes");
-//                } else {
-//                    measure5.setText("Reps");
-//                }
-//
-//                exercise6.setText(otherExercises.get(6).exercise_name);
-//                conversion6.setText(Double.toString((double) Math.round(calories / otherExercises.get(6).calories_per)));
-//                if(otherExercises.get(6).mins_or_reps) {
-//                    measure6.setText("Minutes");
-//                } else {
-//                    measure6.setText("Reps");
-//                }
-//
-//                exercise7.setText(otherExercises.get(7).exercise_name);
-//                conversion7.setText(Double.toString((double) Math.round(calories / otherExercises.get(7).calories_per)));
-//                if(otherExercises.get(7).mins_or_reps) {
-//                    measure7.setText("Minutes");
-//                } else {
-//                    measure7.setText("Reps");
-//                }
-//
-//                exercise8.setText(otherExercises.get(8).exercise_name);
-//                conversion8.setText(Double.toString((double) Math.round(calories / otherExercises.get(8).calories_per)));
-//                if(otherExercises.get(8).mins_or_reps) {
-//                    measure8.setText("Minutes");
-//                } else {
-//                    measure8.setText("Reps");
-//                }
-//
-//                exercise9.setText(otherExercises.get(9).exercise_name);
-//                conversion9.setText(Double.toString((double) Math.round(calories / otherExercises.get(9).calories_per)));
-//                if(otherExercises.get(9).mins_or_reps) {
-//                    measure9.setText("Minutes");
-//                } else {
-//                    measure9.setText("Reps");
-//                }
-//
-//                exercise10.setText(otherExercises.get(10).exercise_name);
-//                conversion10.setText(Double.toString((double) Math.round(calories / otherExercises.get(10).calories_per)));
-//                if(otherExercises.get(10).mins_or_reps) {
-//                    measure10.setText("Minutes");
-//                } else {
-//                    measure10.setText("Reps");
-//                }
-//
-//
-//
-//            }
-//
-//            public void afterTextChanged(Editable editable) {
-//
-//            }
-//
-//        });
-
-
-
-
-//        btnSubmit.setOnClickListener(new View.OnClickListener() {
-//
-//            public void onClick(View v) {
-//                String selected_exercise = exerciseOptions.getSelectedItem().toString();
-//                Log.i("mins Logged:", minsLogged.getText().toString());
-//                System.out.println(minsLogged.getText().toString());
-//                calories = 0;
-//                mins = 0;
-//                if (minsLogged.getText().length() == 0) {
-//                    Log.i("", "Got to ZERO");
-//                    calories = (double) 0;
-//                    mins = 0;
-//                } else {
-//                    mins = Double.parseDouble(minsLogged.getText().toString());
-//
-//                    if (exercise_hash.get(selected_exercise).mins_or_reps) {
-//                        minsOrReps.setText("Minutes");
-//                    } else {
-//                        minsOrReps.setText("Reps");
-//                    }
-//                    calories = exercise_hash.get(selected_exercise).calories_per * mins;
-//                }
-//
-//                calsBurned.setText(Double.toString(calories));
-//                calsBurned.setTextColor(Color.BLACK);
-//
-//            }
-//
-//        });
-
 
 
     }
