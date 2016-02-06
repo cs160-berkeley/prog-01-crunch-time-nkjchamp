@@ -65,10 +65,12 @@
             android:id="@+id/editMinsLogged"
             android:paddingTop="20dp"
             android:layout_below="@+id/excercises"
-            android:layout_toEndOf="@+id/colon"
             android:hint="0"
             android:maxLength="7"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_toEndOf="@+id/colon"
+            android:layout_toStartOf="@+id/calsBurned" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -76,9 +78,8 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Number of Calories Burned:"
             android:id="@+id/calsBurned"
-            android:layout_below="@+id/editMinsLogged"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp" />
+            android:layout_below="@+id/excercises"
+            android:layout_alignParentEnd="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -88,7 +89,8 @@
             android:text="Calories"
             android:textColor="#000000"
             android:layout_below="@+id/calsBurned"
-            android:layout_centerHorizontal="true" />
+            android:layout_toEndOf="@+id/editMinsLogged"
+            android:layout_marginStart="69dp" />
 
         <!--other exercises-->
 
@@ -98,10 +100,9 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="What if you did other exercises?"
             android:id="@+id/otherExercises"
-            android:layout_marginTop="50dp"
-            android:layout_below="@+id/viewCalsBurned"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_below="@+id/editMinsLogged"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -109,10 +110,11 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Leg-Lift"
             android:id="@+id/e1"
-            android:layout_marginTop="17dp"
             android:paddingRight="10dp"
+            android:layout_marginStart="69dp"
             android:layout_below="@+id/otherExercises"
-            android:layout_toStartOf="@+id/editMinsLogged" />
+            android:layout_alignStart="@+id/otherExercises"
+            android:layout_marginTop="20dp" />
 
         <TextView
             android:layout_width="wrap_content"

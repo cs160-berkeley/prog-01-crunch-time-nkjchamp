@@ -43,10 +43,9 @@ public class MainActivity extends AppCompatActivity {
     TextView exercise8, conversion8, measure8;
     TextView exercise9, conversion9, measure9;
     TextView exercise10, conversion10, measure10;
-    TextView exercise11, conversion11, measure11;
 
 
-    double mins,calories;
+    float mins, calories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         minsLogged = (EditText)findViewById(R.id.editMinsLogged);
         calsBurned = (TextView)findViewById(R.id.viewCalsBurned);
-        calsBurnedEdit = (EditText)findViewById(R.id.viewCalsBurnedEdit);
+//        calsBurnedEdit = (EditText)findViewById(R.id.viewCalsBurnedEdit);
 //        btnSubmit = (Button)findViewById(R.id.submit);
         minsOrReps = (TextView)findViewById(R.id.minsLogged);
 
@@ -154,23 +153,23 @@ public class MainActivity extends AppCompatActivity {
                 mins = 0;
                 if (minsLogged.getText().length() == 0) {
                     Log.i("", "Got to ZERO");
-                    calories = (double) 0;
+                    calories = 0;
                     mins = 0;
                 } else {
-                    mins = Double.parseDouble(minsLogged.getText().toString());
+                    mins = Float.parseFloat(minsLogged.getText().toString());
 
                     if (exercise_hash.get(selected_exercise).mins_or_reps) {
                         minsOrReps.setText("Minutes");
                     } else {
                         minsOrReps.setText("Reps");
                     }
-                    calories = exercise_hash.get(selected_exercise).calories_per * mins;
+                    calories = Math.round(exercise_hash.get(selected_exercise).calories_per * mins);
                 }
 
-                calsBurned.setText(Double.toString((double) Math.round(calories)));
+                calsBurned.setText(Integer.toString((int) Math.round(calories)));
                 calsBurned.setTextColor(Color.BLACK);
 
-                calsBurnedEdit.setText(Double.toString((double) Math.round(calories)));
+//                calsBurnedEdit.setText(Integer.toString((int) Math.round(calories)));
 
                 ArrayList<ExerciseInfo> otherExercises = new ArrayList<ExerciseInfo>();
 
@@ -188,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise0.setText(otherExercises.get(0).exercise_name);
-                conversion0.setText(Double.toString((double) Math.round(calories / otherExercises.get(0).calories_per)));
+                conversion0.setText(Integer.toString((int) Math.round(calories / otherExercises.get(0).calories_per)));
                 if(otherExercises.get(0).mins_or_reps) {
                     measure0.setText("Minutes");
                 } else {
@@ -196,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise1.setText(otherExercises.get(1).exercise_name);
-                conversion1.setText(Double.toString((double) Math.round(calories / otherExercises.get(1).calories_per)));
+                conversion1.setText(Integer.toString((int) Math.round(calories / otherExercises.get(1).calories_per)));
                 if(otherExercises.get(1).mins_or_reps) {
                     measure1.setText("Minutes");
                 } else {
@@ -204,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise2.setText(otherExercises.get(2).exercise_name);
-                conversion2.setText(Double.toString((double) Math.round(calories / otherExercises.get(2).calories_per)));
+                conversion2.setText(Integer.toString((int) Math.round(calories / otherExercises.get(2).calories_per)));
                 if(otherExercises.get(2).mins_or_reps) {
                     measure2.setText("Minutes");
                 } else {
@@ -212,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise3.setText(otherExercises.get(3).exercise_name);
-                conversion3.setText(Double.toString((double) Math.round(calories / otherExercises.get(3).calories_per)));
+                conversion3.setText(Integer.toString((int) Math.round(calories / otherExercises.get(3).calories_per)));
                 if(otherExercises.get(3).mins_or_reps) {
                     measure3.setText("Minutes");
                 } else {
@@ -220,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise4.setText(otherExercises.get(4).exercise_name);
-                conversion4.setText(Double.toString((double) Math.round(calories / otherExercises.get(4).calories_per)));
+                conversion4.setText(Integer.toString((int) Math.round(calories / otherExercises.get(4).calories_per)));
                 if(otherExercises.get(4).mins_or_reps) {
                     measure4.setText("Minutes");
                 } else {
@@ -228,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise5.setText(otherExercises.get(5).exercise_name);
-                conversion5.setText(Double.toString((double) Math.round(calories / otherExercises.get(5).calories_per)));
+                conversion5.setText(Integer.toString((int) Math.round(calories / otherExercises.get(5).calories_per)));
                 if(otherExercises.get(5).mins_or_reps) {
                     measure5.setText("Minutes");
                 } else {
@@ -236,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise6.setText(otherExercises.get(6).exercise_name);
-                conversion6.setText(Double.toString((double) Math.round(calories / otherExercises.get(6).calories_per)));
+                conversion6.setText(Integer.toString((int) Math.round(calories / otherExercises.get(6).calories_per)));
                 if(otherExercises.get(6).mins_or_reps) {
                     measure6.setText("Minutes");
                 } else {
@@ -244,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise7.setText(otherExercises.get(7).exercise_name);
-                conversion7.setText(Double.toString((double) Math.round(calories / otherExercises.get(7).calories_per)));
+                conversion7.setText(Integer.toString((int) Math.round(calories / otherExercises.get(7).calories_per)));
                 if(otherExercises.get(7).mins_or_reps) {
                     measure7.setText("Minutes");
                 } else {
@@ -252,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise8.setText(otherExercises.get(8).exercise_name);
-                conversion8.setText(Double.toString((double) Math.round(calories / otherExercises.get(8).calories_per)));
+                conversion8.setText(Integer.toString((int) Math.round(calories / otherExercises.get(8).calories_per)));
                 if(otherExercises.get(8).mins_or_reps) {
                     measure8.setText("Minutes");
                 } else {
@@ -260,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise9.setText(otherExercises.get(9).exercise_name);
-                conversion9.setText(Double.toString((double) Math.round(calories / otherExercises.get(9).calories_per)));
+                conversion9.setText(Integer.toString((int) Math.round(calories / otherExercises.get(9).calories_per)));
                 if(otherExercises.get(9).mins_or_reps) {
                     measure9.setText("Minutes");
                 } else {
@@ -268,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 exercise10.setText(otherExercises.get(10).exercise_name);
-                conversion10.setText(Double.toString((double) Math.round(calories / otherExercises.get(10).calories_per)));
+                conversion10.setText(Integer.toString((int) Math.round(calories / otherExercises.get(10).calories_per)));
                 if(otherExercises.get(10).mins_or_reps) {
                     measure10.setText("Minutes");
                 } else {
