@@ -8,7 +8,7 @@ Neil Jagtiani ([njagtiani@berkeley.edu](mailto:your_email@berkeley.edu))
 
 ## Demo Video
 
-See CrunchTime (https://vimeo.com/neiljag/cs160prog01) (password: crunctime)
+See CrunchTime (https://vimeo.com/neiljag/cs160prog01) (password: crunchtime)
 
 ## Screenshots
 
